@@ -3,7 +3,7 @@
 	<!-- servername value is either the host name or the IP address -->
 	<!-- servertype contains the server type and it is case-insensitive -->
 		<server>
-			<servertype>NetMeter</servertype>
+			<servertype>Ditiss</servertype>
 			<servername>PSGVM2K8R2X64</servername>
 			<databasename>DTISS</databasename>
 			<databasedriver>{SQL Server}</databasedriver>
