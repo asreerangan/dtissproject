@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xmlconfig>
+	<!-- servername value is either the host name or the IP address -->
+	<!-- servertype contains the server type and it is case-insensitive -->
+		<server>
+			<servertype>NetMeter</servertype>
+			<servername>PSGVM2K8R2X64</servername>
+			<databasename>DTISS</databasename>
+			<databasedriver>{SQL Server}</databasedriver>
+			<databasetype>{Sql Server}</databasetype>
+			<username>dtiss</username>
+			<password>iTVoLTZTEqM=</password>
+		</server>
+</xmlconfig>
