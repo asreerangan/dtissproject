@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xmlconfig>
-  
+  // Dnt change the file ever !!!
     <SecurityKey>Renju Rocks</SecurityKey>
    <Environmenttype>Production</Environmenttype>
    

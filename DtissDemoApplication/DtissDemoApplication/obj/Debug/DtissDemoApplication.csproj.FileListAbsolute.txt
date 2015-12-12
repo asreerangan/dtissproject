@@ -1,0 +1,7 @@
+D:\Dtiss\DtissDemoApplication\DtissDemoApplication\bin\DtissDemoApplication.dll
+D:\Dtiss\DtissDemoApplication\DtissDemoApplication\bin\DtissDemoApplication.pdb
+D:\Dtiss\DtissDemoApplication\DtissDemoApplication\obj\Debug\DtissDemoApplication.dll
+D:\Dtiss\DtissDemoApplication\DtissDemoApplication\obj\Debug\DtissDemoApplication.pdb
+D:\Dtiss\DtissDemoApplication\DtissDemoApplication\bin\DtissEncryptorDecryptor.dll
+D:\Dtiss\DtissDemoApplication\DtissDemoApplication\bin\DtissEncryptorDecryptor.pdb
+D:\Dtiss\DtissDemoApplication\DtissDemoApplication\obj\Debug\DtissDemoApplication.csprojResolveAssemblyReference.cache
