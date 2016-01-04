@@ -40,7 +40,7 @@
                     <li><a href="/">Home</a> </li>
                     <li><a href="/products">Products</a> </li>
                     <li><a href="/about-us">About Us</a> </li>
-                    <li><a href="/contact">Contact Us</a> </li>
+                    <li><a href="AccountLogin.aspx">Logout</a> </li>
                 </ul>
             </div>
         </div>

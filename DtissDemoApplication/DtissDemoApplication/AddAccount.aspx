@@ -3,6 +3,43 @@
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <script type = "text/javascript">
+    function isNumeric(keyCode) {
+        if (keyCode == 16)
+            isShift = true;
+
+        return ((keyCode >= 48 && keyCode <= 57 || keyCode == 8 ||
+            (keyCode >= 96 && keyCode <= 105)) && isShift == false);
+    }
+    </script>
+    <script type = "text/javascript">
+        function isAlpha(keyCode) {
+            return ((keyCode >= 65 && keyCode <= 90) || keyCode == 8)
+        }
+    </script> 
+    <script type = "text/javascript">
+        function isAlphaNumeric(keyCode) {
+            return ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 65 && keyCode <= 90) || keyCode == 8)
+        }
+    </script>
+    <script type = "text/javascript">
+        var isShift = false;
+        function keyUP(keyCode) {
+            if (keyCode == 16)
+                isShift = false;
+        }
+    </script>
+    <script type ="text/javascript">
+        function CheckTextLength(text, long) {
+            var maxlength = new Number(long); // Change number to your max length.
+            if (text.value.length > maxlength) {
+                text.value = text.value.substring(0, maxlength);
+                alert(" Only " + long + " characters allowed");
+            }
+        }
+    
+    </script>
  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="registrationform">
                 <div class="form-horizontal">
@@ -87,11 +124,12 @@
                                 OnServerValidate="CustomValidator1_ServerValidate">
                                 </asp:CustomValidator>
                             </div>
-                             <asp:Label ID="Label5" runat="server" Text="CVV" CssClass="col-lg-2 control-label"></asp:Label>
+                             <asp:Label ID="Label5" runat="server" Text="CVV"   CssClass="col-lg-2 control-label" ></asp:Label>
                             <div class="col-lg-10">
-                                <asp:TextBox ID="TextBox7" runat="server" placeholder="CVV" CssClass="form-control" TextMode ="Password"></asp:TextBox>
-                                <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="RangeValidator" MaximumValue="999" MinimumValue="100" Type="Integer" Text="CVV number needs to be entered" ControlToValidate="TextBox7"></asp:RangeValidator>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="TextBox7"></asp:RequiredFieldValidator>
+                                <asp:TextBox ID="Cvv" runat="server" placeholder="CVV" CssClass="form-control" onChange="CheckTextLength(this,3)" ></asp:TextBox>
+                              
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="Cvv"></asp:RequiredFieldValidator>
+                               
                             </div>
                         </div>
 
@@ -128,7 +166,7 @@
                 <div class="form-group">
                  <asp:Label ID="Label14" runat="server" Text="Secret 10 digit Number" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
-                                <asp:TextBox ID="TextBox11" runat="server" placeholder="Secret Number" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox11" runat="server" placeholder="Secret Number" onkeyup = "keyUP(event.keyCode) CheckTextLength(this,10)"   onkeydown = "return isNumeric(event.keyCode);" onChange="CheckTextLength(this,10)"  CssClass="form-control" ></asp:TextBox>
                             </div>
                     <ajaxToolkit:PasswordStrength ID="PasswordStrength1" runat="server" TargetControlID="TextBox11" PreferredPasswordLength="10" MinimumNumericCharacters="10" TextStrengthDescriptions="Secret Number should be minimum 10 digits;Excellent"  TextCssClass="form-control" />
                 </div>
@@ -138,7 +176,8 @@
                  <div class="col-lg-10 col-lg-offset-2">
                                 <asp:Button ID="btnSubmit" runat="server" CssClass="btn btn-primary" 
                                     Text="Submit" onclick="btnSubmit_Click" />
-                                  <asp:Button ID="btnCancel" runat="server" CssClass="btn btn-warning" Text="Cancel" />
+                                  <asp:Button ID="btnCancel" runat="server" CssClass="btn btn-warning" 
+                                    Text="Cancel" onclick="btnCancel_Click" />
                             </div>
 
                 </div>

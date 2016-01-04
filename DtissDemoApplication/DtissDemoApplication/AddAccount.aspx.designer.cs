@@ -202,22 +202,13 @@ namespace DtissDemoApplication {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// TextBox7 control.
+        /// Cvv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
-        
-        /// <summary>
-        /// RangeValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
+        protected global::System.Web.UI.WebControls.TextBox Cvv;
         
         /// <summary>
         /// RequiredFieldValidator1 control.
